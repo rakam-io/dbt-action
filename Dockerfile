@@ -18,4 +18,4 @@ ENV DBT_DIR /github/workspace
 WORKDIR $DBT_DIR
 
 # Run dbt
-CMD ["dbt run --profiles-dir ./"]
+CMD ["dbt", "run", "--profiles-dir", "./"]
