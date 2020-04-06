@@ -11,8 +11,11 @@ RUN apt-get update -y && \
 RUN pip install -U pip
 RUN pip install dbt==0.16.0
 
+# Set environment variables
+ENV DBT_DIR /github/workspace
+
 # Set working directory
-WORKDIR $GITHUB_WORKSPACE
+WORKDIR $DBT_DIR
 
 # Run dbt
 CMD ["dbt"]
