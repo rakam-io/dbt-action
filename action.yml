@@ -1,0 +1,9 @@
+name: 'DBT Runner'
+description: 'Takes profiles.yml as an argument and runs DBT jobs in a Docker container'
+inputs:
+  profiles:
+    description: 'The contents of the profiles.yml'
+    required: true
+runs:
+  using: 'docker'
+  image: 'davidgasquez/dbt'
