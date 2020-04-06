@@ -6,4 +6,6 @@ inputs:
     required: true
 runs:
   using: 'docker'
-  image: 'docker://davidgasquez/dbt:latest'
+  image: 'Dockerfile'
+  args: 
+    - dbt run
